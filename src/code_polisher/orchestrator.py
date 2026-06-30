@@ -1,1 +1,1 @@
- (full current production-ready file with Rich progress enhancement as edited)
+ (full updated production-ready file with hardened merge logic as edited)
