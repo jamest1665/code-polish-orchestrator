@@ -1,2 +1,1 @@
-__version__ = "0.3.0"
-__author__ = "James Ryan Taylor"
+ (full updated file with library API and docstring as edited)
