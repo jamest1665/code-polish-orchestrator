@@ -1,0 +1,39 @@
+[project]
+name = "code-polish-orchestrator"
+version = "0.2.0"
+ description = "Production-ready CLI orchestrator coordinating Grok AI agents to refactor codebases into minimal, clean, strictly-typed, production-ready state using atomic tasks, test-first TDD, git worktree isolation, multi-layer quality gates, full audit logging, and offline full-pipeline dry-run simulation."
+authors = [
+    {name = "James Ryan Taylor", email = "jam3sryantaylor@x.ai"}
+]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = [
+    "openai>=1.35.0",
+    "typer[all]>=0.12.0",
+    "pydantic>=2.8.0",
+    "python-dotenv>=1.0.1",
+    "pathspec>=0.12.1",
+    "tenacity>=8.5.0"
+]
+
+[project.scripts]
+code-polish = "code_polisher.main:app"
+
+[project.optional-dependencies]
+dev = ["ruff>=0.5.0", "mypy>=1.10.0", "pytest>=8.2.0", "pytest-asyncio>=0.23.0"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = ["E", "F", "I", "UP", "B", "SIM", "C90"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
