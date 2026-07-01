@@ -1,1 +1,1 @@
- (integrated sandbox verification call after AST edits)
+ (updated with self-repair retry logic using suggested_adjustments)
