@@ -1,1 +1,1 @@
- (updated with self-repair retry logic using suggested_adjustments)
+ (hardened self-repair logic)
